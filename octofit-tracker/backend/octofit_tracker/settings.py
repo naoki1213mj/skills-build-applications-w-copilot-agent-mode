@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-)^c#ix5x=jqy%7qad++iag%1o!_b2ub(tvo6_i4x!6s&m4x$tf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'solid-guacamole-59766jrqr72749-8000.app.github.dev']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'solid-guacamole-59766jrqr72749-8000.app.github.dev']
 
 
 # Application definition
@@ -37,9 +37,14 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework",
+    "djongo",
+    "corsheaders",
+    "octofit_tracker",
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -124,12 +129,3 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOW_ALL_ORIGINS = True
-
-INSTALLED_APPS += [
-    "rest_framework",
-    "djongo",
-    "corsheaders",
-    "octofit_tracker",
-]
-
-MIDDLEWARE.insert(1, "corsheaders.middleware.CorsMiddleware")
