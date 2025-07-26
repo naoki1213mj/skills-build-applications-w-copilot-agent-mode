@@ -1,0 +1,508 @@
+/* Custom styles for OctoFit Tracker - Mergington High School */
+:root {
+  --octofit-primary: #1e40af;     /* Deep Blue */
+  --octofit-secondary: #7c3aed;   /* Purple */
+  --octofit-accent: #f59e0b;      /* Amber */
+  --octofit-success: #10b981;     /* Green */
+  --octofit-danger: #ef4444;      /* Red */
+  --octofit-warning: #f59e0b;     /* Amber */
+  --octofit-info: #06b6d4;        /* Cyan */
+  --octofit-dark: #1f2937;        /* Dark Gray */
+  --octofit-light: #f9fafb;       /* Light Gray */
+  --octofit-bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --octofit-card-gradient: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--octofit-bg-gradient);
+  background-attachment: fixed;
+  min-height: 100vh;
+  line-height: 1.6;
+  color: var(--octofit-dark);
+}
+
+/* Background pattern overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 2px, transparent 2px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Main container styling */
+.container-fluid, .container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Text Colors */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--octofit-primary);
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.display-5 {
+  background: linear-gradient(45deg, var(--octofit-primary), var(--octofit-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+p, .text-muted {
+  color: var(--octofit-dark) !important;
+}
+
+/* Enhanced navbar styling */
+.navbar {
+  background: linear-gradient(90deg, var(--octofit-primary), var(--octofit-secondary)) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 20px 20px;
+}
+
+.navbar-brand {
+  font-size: 1.8rem !important;
+  font-weight: 800 !important;
+  color: #f8fafc !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.nav-link {
+  font-weight: 600 !important;
+  color: #e2e8f0 !important;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  margin: 0 4px;
+  padding: 8px 16px !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.nav-link:hover {
+  background: rgba(248, 250, 252, 0.2);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.nav-link.active {
+  background: rgba(248, 250, 252, 0.25) !important;
+  color: #ffffff !important;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Card enhancements with OctoFit styling */
+.card {
+  border: none;
+  border-radius: 16px;
+  background: var(--octofit-card-gradient);
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
+.card-header {
+  border-radius: 16px 16px 0 0 !important;
+  border: none;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--octofit-primary), var(--octofit-secondary)) !important;
+  color: white !important;
+  padding: 1.25rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.card-body {
+  padding: 1.5rem;
+  background: white;
+}
+
+.card-footer {
+  background: var(--octofit-light) !important;
+  border: none;
+  padding: 1.25rem;
+}
+
+/* Button enhancements with OctoFit colors */
+.btn {
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  border: 2px solid transparent;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--octofit-primary), var(--octofit-secondary)) !important;
+  border: none;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1e3a8a, #6d28d9) !important;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, var(--octofit-danger), #dc2626) !important;
+  border: none;
+  color: white !important;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, var(--octofit-success), #059669) !important;
+  border: none;
+  color: white !important;
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, var(--octofit-warning), #d97706) !important;
+  border: none;
+  color: white !important;
+}
+
+.btn-info {
+  background: linear-gradient(135deg, var(--octofit-info), #0891b2) !important;
+  border: none;
+  color: white !important;
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--octofit-primary) !important;
+  color: var(--octofit-primary) !important;
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background: var(--octofit-primary) !important;
+  color: white !important;
+}
+
+/* Table enhancements with OctoFit styling */
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  background: white;
+}
+
+.table th {
+  background: linear-gradient(135deg, var(--octofit-primary), var(--octofit-secondary)) !important;
+  color: white !important;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  padding: 1rem 0.75rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.table td {
+  border: none;
+  vertical-align: middle;
+  padding: 1.25rem 0.75rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.table-hover tbody tr:hover {
+  background: linear-gradient(90deg, rgba(30, 64, 175, 0.05), rgba(124, 58, 237, 0.05)) !important;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background: rgba(249, 250, 251, 0.5);
+}
+
+/* Links styling */
+a {
+  color: var(--octofit-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--octofit-secondary);
+  text-decoration: underline;
+  text-decoration-color: var(--octofit-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  background: white;
+  backdrop-filter: blur(10px);
+}
+
+.dropdown-item {
+  font-weight: 500;
+  color: var(--octofit-dark);
+  padding: 0.75rem 1.25rem;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  margin: 4px 8px;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(135deg, var(--octofit-primary), var(--octofit-secondary));
+  color: white;
+  transform: translateX(4px);
+}
+
+.dropdown-item.text-danger:hover {
+  background: linear-gradient(135deg, var(--octofit-danger), #dc2626);
+}
+
+.dropdown-item.text-warning:hover {
+  background: linear-gradient(135deg, var(--octofit-warning), #d97706);
+}
+
+/* Avatar styling */
+.avatar {
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border: 3px solid white;
+}
+
+/* Badge enhancements with OctoFit colors */
+.badge {
+  font-weight: 600;
+  padding: 0.6em 1em;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.badge.bg-primary {
+  background: linear-gradient(135deg, var(--octofit-primary), var(--octofit-secondary)) !important;
+}
+
+.badge.bg-success {
+  background: linear-gradient(135deg, var(--octofit-success), #059669) !important;
+}
+
+.badge.bg-warning {
+  background: linear-gradient(135deg, var(--octofit-warning), #d97706) !important;
+}
+
+.badge.bg-danger {
+  background: linear-gradient(135deg, var(--octofit-danger), #dc2626) !important;
+}
+
+.badge.bg-info {
+  background: linear-gradient(135deg, var(--octofit-info), #0891b2) !important;
+}
+
+.badge.bg-secondary {
+  background: linear-gradient(135deg, #6b7280, #4b5563) !important;
+}
+
+/* Loading spinner enhancement with OctoFit colors */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-color: var(--octofit-primary);
+  border-right-color: transparent;
+}
+
+.spinner-border.text-info {
+  border-color: var(--octofit-info);
+  border-right-color: transparent;
+}
+
+.spinner-border.text-danger {
+  border-color: var(--octofit-danger);
+  border-right-color: transparent;
+}
+
+/* Modal enhancements with OctoFit styling */
+.modal-content {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+}
+
+.modal-header {
+  border-radius: 20px 20px 0 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  background: linear-gradient(135deg, var(--octofit-primary), var(--octofit-secondary));
+  color: white;
+  padding: 1.5rem;
+}
+
+.modal-title {
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.modal-body {
+  padding: 2rem;
+  background: white;
+}
+
+.modal-footer {
+  background: var(--octofit-light);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-radius: 0 0 20px 20px;
+  padding: 1.5rem;
+}
+
+/* Progress bar styling with OctoFit colors */
+.progress {
+  border-radius: 15px;
+  background-color: rgba(30, 64, 175, 0.1);
+  height: 12px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+  border-radius: 15px;
+  background: linear-gradient(90deg, var(--octofit-success), var(--octofit-info));
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: width 0.6s ease;
+}
+
+/* Alert styling */
+.alert {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.1));
+  border-left: 4px solid var(--octofit-danger);
+  color: var(--octofit-danger);
+}
+
+.alert-success {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1));
+  border-left: 4px solid var(--octofit-success);
+  color: var(--octofit-success);
+}
+
+.alert-info {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(8, 145, 178, 0.1));
+  border-left: 4px solid var(--octofit-info);
+  color: var(--octofit-info);
+}
+
+/* Custom utility classes */
+.shadow-sm {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.border-0 {
+  border: none !important;
+}
+
+/* Responsive design enhancements */
+@media (max-width: 768px) {
+  .display-5 {
+    font-size: 2rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.25rem !important;
+  }
+  
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  .btn-group .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Animation for page transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container > div {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Focus states for accessibility */
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .btn,
+  .modal {
+    display: none !important;
+  }
+  
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #dee2e6 !important;
+  }
+}
