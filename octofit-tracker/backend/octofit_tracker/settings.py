@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-)^c#ix5x=jqy%7qad++iag%1o!_b2ub(tvo6_i4x!6s&m4x$tf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'solid-guacamole-59766jrqr72749-8000.app.github.dev']
 
 
 # Application definition
@@ -133,4 +133,3 @@ INSTALLED_APPS += [
 ]
 
 MIDDLEWARE.insert(1, "corsheaders.middleware.CorsMiddleware")
-ALLOWED_HOSTS = ["*"]
